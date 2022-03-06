@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background-image: url('https://images2.alphacoders.com/992/thumb-1920-992695.png');
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entryScreen{
+  opacity: 1;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  cursor: pointer;
+}
+
+.entryScreen h2{
+  color: white;
+  position: absolute;
+  font-size: 24px;
+  bottom: 50px;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+
+.slide{
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 1s ease-in-out;
+}
+
+[id=mirage]{
+  background-position: 10%;
+
+}
+
+[id=path]{
+  background-position: 75%;
+}
+
+.slide h3{
+  color: white;
+  position: absolute;
+  font-size: 24px;
+  bottom: -40px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.slide.active h3{
+  opacity: 1;
+  transition: opacity 0.5s ease-in 0.5s;
+}
+
+.slide.active{
+  flex: 10;
+}
+
+.slide.inactive{
+  opacity: 1;
+  visibility: hidden;
+}
+
+.entryScreen.inactive{
+  opacity: 1;
+  visibility: hidden;
+  transition: visibility step-end;
+}
